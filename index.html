@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>NUACID - Trang chủ</title>
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<header class="header">
+  <div class="container nav">
+    <div class="logo">CÔNG TY TNHH NUACID</div>
+    <nav class="menu">
+      <a href="index.html" data-menu="home"><span class="label"></span>
+        <span class="lang" data-lang="vn">Trang chủ</span>
+        <span class="lang" data-lang="en">Home</span>
+        <span class="lang" data-lang="cn">首页</span>
+      </a>
+      <a href="about.html" data-menu="about"><span class="label"></span>
+        <span class="lang" data-lang="vn">Giới thiệu</span>
+        <span class="lang" data-lang="en">About</span>
+        <span class="lang" data-lang="cn">关于</span>
+      </a>
+      <a href="products.html" data-menu="products"><span class="label"></span>
+        <span class="lang" data-lang="vn">Sản phẩm</span>
+        <span class="lang" data-lang="en">Products</span>
+        <span class="lang" data-lang="cn">产品</span>
+      </a>
+      <a href="news.html" data-menu="news"><span class="label"></span>
+        <span class="lang" data-lang="vn">Tin tức</span>
+        <span class="lang" data-lang="en">News</span>
+        <span class="lang" data-lang="cn">新闻</span>
+      </a>
+      <a href="contact.html" data-menu="contact"><span class="label"></span>
+        <span class="lang" data-lang="vn">Liên hệ</span>
+        <span class="lang" data-lang="en">Contact</span>
+        <span class="lang" data-lang="cn">联系</span>
+      </a>
+    </nav>
+    <div class="langswitch">
+      <div class="lang-switch-btn lang-switch" data-lang="vn">🇻🇳</div>
+      <div class="lang-switch-btn lang-switch" data-lang="en">🇬🇧</div>
+      <div class="lang-switch-btn lang-switch" data-lang="cn">中文</div>
+    </div>
+  </div>
+</header>
+
+<main class="container">
+  <section class="hero">
+    <div class="slideshow">
+      <img src="assets/images/banner1.jpg" class="active" alt="Banner 1">
+      <img src="assets/images/banner2.jpg" alt="Banner 2">
+      <img src="assets/images/banner3.jpg" alt="Banner 3">
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="lang" data-lang="vn">
+      <h1>NUACID – Giải pháp dinh dưỡng tối ưu cho vật nuôi Việt Nam</h1><p>NUACID cung cấp giải pháp dinh dưỡng toàn diện, sản xuất thức ăn cho heo, gia cầm và thủy sản bằng công nghệ hiện đại.</p><p><strong>Sản phẩm tiêu biểu:</strong></p><ul><li>Thức ăn heo – dòng tăng trọng và dinh dưỡng cao</li><li>Thức ăn gia cầm – cho gà lấy thịt và gà đẻ</li><li>Thức ăn thủy sản – hiệu suất cho ăn cao</li></ul>
+    </div>
+    <div class="lang" data-lang="en">
+      <h1>NUACID – Optimal Nutrition Solutions for Livestock in Vietnam</h1><p>NUACID delivers comprehensive nutrition solutions, producing feeds for pigs, poultry and aquaculture with modern technology.</p><p><strong>Featured products:</strong></p><ul><li>Pig feeds – high performance growth formulas</li><li>Poultry feeds – broiler and layer ranges</li><li>Aquatic feeds – optimized for feed efficiency</li></ul>
+    </div>
+    <div class="lang" data-lang="cn">
+      <h1>NUACID — 越南畜牧业的最佳营养解决方案</h1><p>NUACID 提供全面的营养解决方案，采用现代化技术生产猪、家禽和水产饲料。</p><p><strong>特色产品：</strong></p><ul><li>猪饲料 — 高性能促进增重配方</li><li>家禽饲料 — 肉鸡及产蛋系列</li><li>水产饲料 — 提高饲料利用率</li></ul>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div style="display:flex;justify-content:space-between;align-items:center;gap:12px">
+      <div>
+        <strong>CÔNG TY TNHH NUACID</strong><br>
+        Địa chỉ: [để trống]<br>
+        Điện thoại: [để trống] · Email: [để trống]
+      </div>
+      <div>
+        <a href="index.html">Trang chủ</a> · <a href="contact.html">Liên hệ</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/language.js"></script>
+<script>
+window.onload = function() {
+  let index = 0;
+  const images = document.querySelectorAll('.slideshow img');
+  if (images.length === 0) return;
+  images[0].classList.add('active');
+  setInterval(function(){ 
+    images[index].classList.remove('active');
+    index = (index + 1) % images.length;
+    images[index].classList.add('active');
+  }, 3000);
+};
+</script>
+</body>
+</html>

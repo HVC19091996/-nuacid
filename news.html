@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>NUACID - Tin tức</title>
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<header class="header">
+  <div class="container nav">
+    <div class="logo">CÔNG TY TNHH NUACID</div>
+    <nav class="menu">
+      <a href="index.html" data-menu="home"><span class="label"></span>
+        <span class="lang" data-lang="vn">Trang chủ</span>
+        <span class="lang" data-lang="en">Home</span>
+        <span class="lang" data-lang="cn">首页</span>
+      </a>
+      <a href="about.html" data-menu="about"><span class="label"></span>
+        <span class="lang" data-lang="vn">Giới thiệu</span>
+        <span class="lang" data-lang="en">About</span>
+        <span class="lang" data-lang="cn">关于</span>
+      </a>
+      <a href="products.html" data-menu="products"><span class="label"></span>
+        <span class="lang" data-lang="vn">Sản phẩm</span>
+        <span class="lang" data-lang="en">Products</span>
+        <span class="lang" data-lang="cn">产品</span>
+      </a>
+      <a href="news.html" data-menu="news"><span class="label"></span>
+        <span class="lang" data-lang="vn">Tin tức</span>
+        <span class="lang" data-lang="en">News</span>
+        <span class="lang" data-lang="cn">新闻</span>
+      </a>
+      <a href="contact.html" data-menu="contact"><span class="label"></span>
+        <span class="lang" data-lang="vn">Liên hệ</span>
+        <span class="lang" data-lang="en">Contact</span>
+        <span class="lang" data-lang="cn">联系</span>
+      </a>
+    </nav>
+    <div class="langswitch">
+      <div class="lang-switch-btn lang-switch" data-lang="vn">🇻🇳</div>
+      <div class="lang-switch-btn lang-switch" data-lang="en">🇬🇧</div>
+      <div class="lang-switch-btn lang-switch" data-lang="cn">中文</div>
+    </div>
+  </div>
+</header>
+
+<main class="container">
+  <section class="hero">
+    <div class="slideshow">
+      <img src="assets/images/banner1.jpg" class="active" alt="Banner 1">
+      <img src="assets/images/banner2.jpg" alt="Banner 2">
+      <img src="assets/images/banner3.jpg" alt="Banner 3">
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="lang" data-lang="vn">
+      <h1>Tin tức</h1><ul><li>NUACID ra mắt dòng thức ăn heo mới (2025)</li><li>Hội thảo dinh dưỡng gia cầm – NUACID tài trợ</li></ul>
+    </div>
+    <div class="lang" data-lang="en">
+      <h1>News</h1><ul><li>NUACID launches new pig feed range (2025)</li><li>Poultry nutrition workshop sponsored by NUACID</li></ul>
+    </div>
+    <div class="lang" data-lang="cn">
+      <h1>新闻</h1><ul><li>NUACID 发布新猪饲料系列 (2025)</li><li>NUACID 赞助的家禽营养研讨会</li></ul>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div style="display:flex;justify-content:space-between;align-items:center;gap:12px">
+      <div>
+        <strong>CÔNG TY TNHH NUACID</strong><br>
+        Địa chỉ: [để trống]<br>
+        Điện thoại: [để trống] · Email: [để trống]
+      </div>
+      <div>
+        <a href="index.html">Trang chủ</a> · <a href="contact.html">Liên hệ</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/language.js"></script>
+<script>
+window.onload = function() {
+  let index = 0;
+  const images = document.querySelectorAll('.slideshow img');
+  if (images.length === 0) return;
+  images[0].classList.add('active');
+  setInterval(function(){ 
+    images[index].classList.remove('active');
+    index = (index + 1) % images.length;
+    images[index].classList.add('active');
+  }, 3000);
+};
+</script>
+</body>
+</html>
