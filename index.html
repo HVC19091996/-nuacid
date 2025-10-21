@@ -7,6 +7,7 @@
 <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
+
 <header class="header">
   <div class="container nav">
     <div class="logo">CÔNG TY TNHH NUACID</div>
@@ -27,54 +28,52 @@
 </header>
 
 <main class="container">
- <section class="hero">
-  <div class="slideshow">
-    <img src="assets/images/banner1.jpg" class="active" alt="Banner 1">
-    <img src="assets/images/banner2.jpg" alt="Banner 2">
-    <img src="assets/images/banner3.jpg" alt="Banner 3">
-  </div>
-</section>
 
+  <!-- Slideshow banner -->
+  <section class="hero">
+    <div class="slideshow">
+      <img src="assets/images/banner1.jpg" class="active" alt="Banner 1">
+      <img src="assets/images/banner2.jpg" alt="Banner 2">
+      <img src="assets/images/banner3.jpg" alt="Banner 3">
+    </div>
+  </section>
 
+  <!-- Nội dung -->
   <section class="content">
     <div class="lang" data-lang="vn">
-      
-<h1>NUACID – Giải pháp dinh dưỡng tối ưu cho vật nuôi Việt Nam</h1>
-<p>Chúng tôi là đơn vị sản xuất thức ăn chăn nuôi chuyên nghiệp, cung cấp sản phẩm chất lượng cao, phù hợp với điều kiện chăn nuôi Việt Nam.</p>
-<p><strong>Các dòng sản phẩm chính:</strong></p>
-<ul>
-<li>Thức ăn cho heo (heo con, heo thịt, heo nái)</li>
-<li>Thức ăn cho gà, vịt</li>
-<li>Thức ăn thủy sản</li>
-<li>Nguyên liệu và phụ gia dinh dưỡng</li>
-</ul>
-
+      <h1>NUACID – Giải pháp dinh dưỡng tối ưu cho vật nuôi Việt Nam</h1>
+      <p>Chúng tôi là đơn vị sản xuất thức ăn chăn nuôi chuyên nghiệp, cung cấp sản phẩm chất lượng cao, phù hợp với điều kiện chăn nuôi Việt Nam.</p>
+      <p><strong>Các dòng sản phẩm chính:</strong></p>
+      <ul>
+        <li>Thức ăn cho heo (heo con, heo thịt, heo nái)</li>
+        <li>Thức ăn cho gà, vịt</li>
+        <li>Thức ăn thủy sản</li>
+        <li>Nguyên liệu và phụ gia dinh dưỡng</li>
+      </ul>
     </div>
+
     <div class="lang" data-lang="en">
-      
-<h1>NUACID – Optimal Nutrition Solutions for Livestock in Vietnam</h1>
-<p>We specialize in producing high-quality animal feed, designed to meet the nutritional needs of livestock under Vietnamese farming conditions.</p>
-<p><strong>Main product lines:</strong></p>
-<ul>
-<li>Pig feed (piglets, fattening, sows)</li>
-<li>Poultry feed (chicken, duck)</li>
-<li>Aquatic feed</li>
-<li>Nutritional ingredients & additives</li>
-</ul>
-
+      <h1>NUACID – Optimal Nutrition Solutions for Livestock in Vietnam</h1>
+      <p>We specialize in producing high-quality animal feed, designed to meet the nutritional needs of livestock under Vietnamese farming conditions.</p>
+      <p><strong>Main product lines:</strong></p>
+      <ul>
+        <li>Pig feed (piglets, fattening, sows)</li>
+        <li>Poultry feed (chicken, duck)</li>
+        <li>Aquatic feed</li>
+        <li>Nutritional ingredients & additives</li>
+      </ul>
     </div>
-    <div class="lang" data-lang="cn">
-      
-<h1>NUACID — 越南畜牧业的最佳营养解决方案</h1>
-<p>我们专业生产高质量的动物饲料，适用于越南养殖条件下的营养需求。</p>
-<p><strong>主要产品：</strong></p>
-<ul>
-<li>猪饲料（仔猪、育肥、繁殖母猪）</li>
-<li>家禽饲料（鸡、鸭）</li>
-<li>水产饲料</li>
-<li>营养原料与添加剂</li>
-</ul>
 
+    <div class="lang" data-lang="cn">
+      <h1>NUACID — 越南畜牧业的最佳营养解决方案</h1>
+      <p>我们专业生产高质量的动物饲料，适用于越南养殖条件下的营养需求。</p>
+      <p><strong>主要产品：</strong></p>
+      <ul>
+        <li>猪饲料（仔猪、育肥、繁殖母猪）</li>
+        <li>家禽饲料（鸡、鸭）</li>
+        <li>水产饲料</li>
+        <li>营养原料与添加剂</li>
+      </ul>
     </div>
   </section>
 </main>
@@ -84,7 +83,7 @@
     <div style="display:flex;justify-content:space-between;align-items:center;gap:12px">
       <div>
         <strong>CÔNG TY TNHH NUACID</strong><br>
-        Địa chỉ: [Địa chỉ công ty – để trống]<br>
+        Địa chỉ: [để trống]<br>
         Điện thoại: [để trống] · Email: [để trống]
       </div>
       <div>
@@ -95,17 +94,20 @@
 </footer>
 
 <script src="assets/js/language.js"></script>
-
 <script>
-let index = 0;
-const images = document.querySelectorAll('.slideshow img');
-setInterval(() => {
-  images[index].classList.remove('active');
-  index = (index + 1) % images.length;
-  images[index].classList.add('active');
-}, 3000); // đổi ảnh sau mỗi 3 giây
+window.onload = function() {
+  let index = 0;
+  const images = document.querySelectorAll('.slideshow img');
+  if (images.length === 0) return;
+
+  images[0].classList.add('active');
+  setInterval(() => {
+    images[index].classList.remove('active');
+    index = (index + 1) % images.length;
+    images[index].classList.add('active');
+  }, 3000); // đổi ảnh sau mỗi 3 giây
+};
 </script>
 
 </body>
 </html>
-
