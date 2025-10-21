@@ -95,5 +95,18 @@
 </footer>
 
 <script src="assets/js/language.js"></script>
+
+<script>
+let index = 0;
+const images = document.querySelectorAll('.slideshow img');
+setInterval(() => {
+  images[index].classList.remove('active');
+  index = (index + 1) % images.length;
+  images[index].classList.add('active');
+}, 3000); // đổi ảnh sau mỗi 3 giây
+</script>
+
 </body>
+</html>
+
 </html>
